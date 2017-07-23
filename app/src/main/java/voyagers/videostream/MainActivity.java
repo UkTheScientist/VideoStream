@@ -3,11 +3,15 @@ package voyagers.videostream;
 import android.app.ProgressDialog;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         // Show progressbar
         pDialog.show();
 
+
+
         // Set the media controller buttons
         if (mediacontroller == null) {
             // Start the MediaController
@@ -57,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < videoview.length; i++) {
                 mediacontroller[i] = new MediaController(this);
                 videoview[i].setMediaController(mediacontroller[i]);
+
                 final Uri video = Uri.parse(VideoURL[i]);
                 videoview[i].setVideoURI(video);
                 videoview[i].setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
