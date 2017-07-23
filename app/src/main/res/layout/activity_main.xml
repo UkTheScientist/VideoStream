@@ -30,25 +30,19 @@
             app:layout_constraintTop_toBottomOf="@+id/videoView1"
             app:layout_constraintVertical_bias="0.529" />
 
-        <RelativeLayout
+        <VideoView
+            android:id="@+id/videoView2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <VideoView
-                android:id="@+id/videoView2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="4dp"
-                android:layout_weight="1"
-                android:padding="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.115"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/videoView"
-                app:layout_constraintVertical_bias="0.529" />
-        </RelativeLayout>
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoView"
+            app:layout_constraintVertical_bias="0.529" />
 
     </LinearLayout>
 
